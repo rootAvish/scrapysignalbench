@@ -9,7 +9,7 @@ setup(
     name="scrapysignalbench",
     version="0.1",
     description="A set of benchmarks for measuring Scrapy's signaling API performance.",
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     url='https://github.com/rootavish/scrapysignalbench',
     license='BSD',
     author=' rootavish',
