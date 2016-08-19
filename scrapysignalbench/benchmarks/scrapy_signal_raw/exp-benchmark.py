@@ -15,7 +15,7 @@ def callback(**kwargs):
 test_signal.connect(callback)
 
 def benchmark():
-    test_signal.send_robust(sender=sender)
+    test_signal.send_catch_log(sender=sender)
 
 run_benchmark(
     benchmark,
