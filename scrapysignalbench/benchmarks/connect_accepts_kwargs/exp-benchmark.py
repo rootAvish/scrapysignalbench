@@ -1,19 +1,17 @@
 from scrapysignalbench.utils import run_benchmark
 from scrapy.signalmanager import SignalManager
+from scrapy.dispatch import Signal
 
-
-test_signal = object()
+test_signal = Signal()
 
 signals = SignalManager()
 
 
-def callback(arg1, arg2):
+def callback(arg1, arg2, **kwargs):
 	pass
-
 
 def benchmark():
 	signals.connect(callback, test_signal)
-	signals.disconnect(callback, test_signal)
 
 
 run_benchmark(

@@ -2,7 +2,6 @@ from scrapysignalbench.utils import run_benchmark
 from scrapy.signalmanager import SignalManager
 from scrapy.signals import Signal
 
-
 test_signal = Signal()
 
 signals = SignalManager()
@@ -11,10 +10,8 @@ signals = SignalManager()
 def callback(arg1, arg2):
 	pass
 
-
 def benchmark():
 	signals.connect(callback, test_signal)
-	signals.disconnect(callback, test_signal)
 
 
 run_benchmark(
